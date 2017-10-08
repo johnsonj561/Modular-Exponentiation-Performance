@@ -35,7 +35,7 @@ If e was encoded in unary, then |e| = e and Alg1 is linear
 
 #### Alg2 (Recursion)
 Alg2(b, e, m):  
-  if e <= 1 return b mod m  
+  if e < 1 return b mod m  
   else if e % 2 == 1 return (b * Alg2(b, e/2, m)) mod m  
   else return [Alg2(b, e/2, m) *  Alg2(b, e/2, m)] mod m  
   
@@ -43,7 +43,7 @@ Through recursion we are able to half e each iteration, producing O(lge) run tim
 
 #### Alg3 (Alg2 Improved)
 Alg3(b, e, m):  
-  if e <= 1 return b mod m  
+  if e < 1 return b mod m  
   else if e % 2 == 1 return (b * Alg2(b, e/2, m)) mod m  
   else:  
     tmp = Alg3(b, e/2, m)    
