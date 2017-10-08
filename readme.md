@@ -27,11 +27,11 @@ then c mod m = (a * b) mod m = [(a mod m) * (b mod m)] mod m
 Alg1(b, e, m):  
   b is multiplied by itself e times  
 
-b and m are constant length; e will grow towards infinity
-Assuming e is encoded in binary, then length of e is lge
-Alg1 running time is approximately 2e = O(e)
-Since |e| = lge and RT = O(e), Alg1 is exponential
-If e was encoded in unary, then |e| = e and Alg1 is linear
+b and m are constant length; e will grow towards infinity  
+Assuming e is encoded in binary, then length of e is lge  
+Alg1 running time is approximately 2e = O(e)  
+Since |e| = lge and RT = O(e), Alg1 is exponential  
+If e was encoded in unary, then |e| = e and Alg1 is linear  
 
 #### Alg2 (Recursion)
 Alg2(b, e, m):  
@@ -39,7 +39,7 @@ Alg2(b, e, m):
   else if e % 2 == 1 return (b * Alg2(b, e/2, m)) mod m  
   else return [Alg2(b, e/2, m) *  Alg2(b, e/2, m)] mod m  
   
-Through recursion we are able to half e each iteration, producing O(lge) run time
+Through recursion we are able to half e each iteration, producing O(lge) run time  
 
 #### Alg3 (Alg2 Improved)
 Alg3(b, e, m):  
@@ -49,8 +49,8 @@ Alg3(b, e, m):
     tmp = Alg3(b, e/2, m)    
     return tmp * tmp  
     
-In the 3rd branch of Alg2, we are calling on Alg2 twice, doubling the number of recursions
-In Alg3 we assign the result of the recursion to a tmp variable, and then multiply by itself
+In the 3rd branch of Alg2, we are calling on Alg2 twice, doubling the number of recursions  
+In Alg3 we assign the result of the recursion to a tmp variable, and then multiply by itself  
 
 
 
