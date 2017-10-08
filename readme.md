@@ -52,6 +52,24 @@ Alg3(b, e, m):
 In the 3rd branch of Alg2, we are calling on Alg2 twice, doubling the number of recursions  
 In Alg3 we assign the result of the recursion to a tmp variable, and then multiply by itself  
 
+-----
+
+### Sample Output
+As seen in the following output, Alg3 out performs Alg1 and Alg2 as e grows towards infinity  
+```python
+Calculating Modular Exponentiation modExp = (b^e) % m, where b = 2 and m = 13
+
+Enter a value for e: 25000
+You entered 25000
+
+modExp1(25000) completed in 0.3934 ms
+modExp1(25000) = 3
+
+modExp2(25000) completed in 1.1700 ms
+modExp2(25000) = 3
+
+modExp3(25000) completed in 0.0188 ms
+modExp3(25000) = 3
 
 
 
